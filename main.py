@@ -8,25 +8,28 @@ Created on Fri Mar  1 12:58:56 2024
 import tkinter as tk
 window = tk.Tk()
 window.attributes('-alpha', 0.7)
-window.title('Area and Rectangle Calculator')
+window.title('Area and Perimeter Calculator')
 window.config(bg="black")   
-window.geometry("275x85")
+window.geometry("275x95")
 window.minsize(275,95)
 window.maxsize(275,95)
 
 def calculate():
-    base = textbox1.get()
-    height = textbox2.get()
-    base = int(base)
-    height = int(height)
-    result = base*height
-    lbl_result["text"] = result
+    try:
+        base = float(textbox1.get())
+        height = float(textbox2.get())
+    except ValueError:
+        lbl_result["text"] = "Please enter two numbers"
+        return
+    area = base*height
+    perimeter = 2*(base+height)
+    lbl_result["text"] = "Area: %g, Perimeter: %g" % (area, perimeter)
     
 # Base x Height
 textbox1 = tk.StringVar()
-textbox1.set("Area...")
+textbox1.set("")
 textbox2 = tk.StringVar()
-textbox2.set("Perimeter...")
+textbox2.set("")
 
 # Title
 lbl_title = tk.Label(master=window, text="Area and Perimeter Calculator",bg="black",fg="white",font=("Helvetica",15))
