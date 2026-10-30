@@ -1,6 +1,6 @@
 ![tkinter calculator banner](banner.png)
 
-# tkinter-calculator
+# Tkinter-Calculator
 
 A small tkinter GUI calculator for a rectangle: enter a base and a
 height, press Calculate, and it shows the area and the perimeter.
