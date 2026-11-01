@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-label="Side view along the ropewalk: bays brightening, three strands twisting into one rope, a coil growing a loop">
+<rect width="1200" height="260" fill="#38312a"/>
+<g fill="#e8dcaf"><rect x="90" y="30" width="90" height="80" opacity=".5"><animate attributeName="opacity" values=".4;.95;.4" dur="12s" repeatCount="indefinite"/></rect><rect x="330" y="30" width="90" height="80" opacity=".5"><animate attributeName="opacity" values=".4;.95;.4" dur="12s" begin="3s" repeatCount="indefinite"/></rect><rect x="570" y="30" width="90" height="80" opacity=".5"><animate attributeName="opacity" values=".4;.95;.4" dur="12s" begin="6s" repeatCount="indefinite"/></rect></g>
+<rect x="60" y="120" width="16" height="120" fill="#211c16"/>
+<g fill="none" stroke="#c69e5e" stroke-width="7"><path d="M76 150 Q 400 120 700 152 T 1120 150"><animate attributeName="d" values="M76 150 Q 400 120 700 152 T 1120 150;M76 150 Q 400 180 700 148 T 1120 150;M76 150 Q 400 120 700 152 T 1120 150" dur="9s" repeatCount="indefinite"/></path><path d="M76 172 Q 400 200 700 170 T 1120 172" opacity=".8"/><path d="M76 194 Q 400 168 700 196 T 1120 194" opacity=".6"/></g>
+<g><rect x="1060" y="140" width="10" height="52" fill="#141210"/><circle cx="1065" cy="130" r="8" fill="#141210"><animateTransform attributeName="transform" type="translate" values="0 0;-14 0;0 0" dur="9s" repeatCount="indefinite"/></circle></g>
+<g fill="none" stroke="#c69e5e" stroke-width="8"><ellipse cx="220" cy="228" rx="70" ry="18"/><ellipse cx="220" cy="228" rx="44" ry="11"><animate attributeName="opacity" values="0;0;1;1" dur="9s" repeatCount="indefinite"/></ellipse></g>
+<g stroke="#dcbe82" stroke-width="2"><line x1="96" y1="238" x2="112" y2="236"><animate attributeName="opacity" values="1;.3;1" dur="9s" repeatCount="indefinite"/></line></g>
+</svg>
