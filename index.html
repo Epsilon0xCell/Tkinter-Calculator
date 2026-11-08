@@ -3,44 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tkinter-Calculator: The Ropewalk Tally Board</title>
-<meta name="description" content="A small tkinter window, titled Area and Perimeter Calculator, for one rectangle: enter a base and a height, press Calculate, and read area and perimeter on one line.">
+<title>Tkinter-Calculator: The Framer's Bench</title>
+<meta name="description" content="A small Tkinter GUI calculator for a rectangle: enter a base and a height, press Calculate, and it shows the area and the perimeter.">
 <style>
-@font-face{font-family:'Anybody';src:url('fonts/Anybody.ttf') format('truetype');}
-@font-face{font-family:'Archivo';src:url('fonts/Archivo.ttf') format('truetype');}
-:root{--teal:#10282c;--foam:#faf6ec;--tar:#17130e;--amber:#ffb040;--hemp:#e8dcbc}
-*{box-sizing:border-box}body{margin:0;background:#e9e2d0;color:var(--tar);font-family:'Archivo',sans-serif;line-height:1.65}
-h1,h2{font-family:'Anybody',sans-serif}
-.hero{padding:2rem 6vw 1rem;max-width:1050px;margin:0 auto}.hero img.banner{width:100%;height:auto}.logo{width:92px;height:auto}
-main{padding:0 6vw 3rem;max-width:1050px;margin:0 auto}
-.bay{background:var(--foam);border:1px solid var(--tar);padding:1.2rem 1.4rem;margin:1.2rem 0;position:relative}
-.bayno{position:absolute;top:8px;right:12px;font-family:'Anybody',sans-serif;color:#7a5c22}
-.tallytag{display:inline-block;background:var(--teal);color:var(--hemp);font-family:'Anybody',sans-serif;text-transform:uppercase;text-decoration:none;padding:.6rem 1.1rem .6rem 1.5rem;margin:.3rem .3rem .3rem 0;position:relative}
-.tallytag:before{content:'';position:absolute;left:7px;top:50%;width:8px;height:8px;margin-top:-4px;border:2px solid var(--hemp);border-radius:50%}
-.tallytag:hover{filter:brightness(1.35)}.tallytag:active{transform:translateY(3px)}.tallytag:focus-visible{outline:3px solid var(--amber)}
-a{color:#7a3c10}
-.rod{border-top:3px solid #7a5c22;margin:2rem 0;height:10px;background:repeating-linear-gradient(to right,transparent 0 58px,#7a5c22 58px 60px)}
-pre{background:#fffdf4;padding:1rem;overflow-x:auto;border:1px solid var(--tar)}
-.benchnote{background:#fffbe8;padding:.9rem 1.1rem;max-width:36rem;border:1px solid var(--tar)}
-footer{padding:2rem 6vw}
+@font-face{font-family:'Hepta Slab';src:url('fonts/HeptaSlab-500.woff2') format('woff2');font-weight:500}
+@font-face{font-family:'Hepta Slab';src:url('fonts/HeptaSlab-700.woff2') format('woff2');font-weight:700}
+@font-face{font-family:'Hepta Slab';src:url('fonts/HeptaSlab-900.woff2') format('woff2');font-weight:900}
+@font-face{font-family:'Heebo';src:url('fonts/Heebo-400.woff2') format('woff2');font-weight:400}
+@font-face{font-family:'Heebo';src:url('fonts/Heebo-500.woff2') format('woff2');font-weight:500}
+@font-face{font-family:'Heebo';src:url('fonts/Heebo-700.woff2') format('woff2');font-weight:700}
+:root{--pine:#efe3cb;--bench:#a97c50;--card:#fffaf0;--ink:#43331f;--glass:#7fa3ad;--glassdk:#4d6f78;--brass:#a87f2d;--brassdk:#7d5c1d;--line:#d8c49a}
+*{box-sizing:border-box} body{margin:0;background:var(--pine);color:var(--ink);font-family:'Heebo',sans-serif;line-height:1.65}
+h1,h2{font-family:'Hepta Slab',serif;color:#6d4c26}
+.hero{background:linear-gradient(165deg,#bd9261 0%,var(--bench) 55%,#8a6240 100%);padding:2.2rem 6vw 1.8rem}
+.hero .inner{max-width:1020px;margin:0 auto}
+.hero img.wide{width:100%;height:auto;display:block;border:6px solid var(--card);border-radius:4px;box-shadow:0 4px 18px rgba(60,40,10,.35)}
+.hero .row{display:flex;gap:1.1rem;align-items:flex-start;margin-top:1.2rem}
+.hero .row img{width:92px;height:92px;object-fit:cover;border-radius:6px;border:3px solid var(--card);background:var(--card)}
+.hero h1{margin:.1rem 0 .3rem;font-size:2.6rem;color:#fff6df}
+.hero p{max-width:44rem;color:#f7ecd2}
+main{padding:0 6vw 3rem;max-width:1020px;margin:0 auto}
+.card{background:var(--card);border:1px solid var(--line);border-top:6px solid var(--brass);border-radius:6px;padding:1.2rem 1.5rem;margin:1.6rem 0;box-shadow:0 2px 8px rgba(90,70,40,.14)}
+.card h2{margin:.1rem 0 .5rem;font-size:1.8rem;font-weight:700}
+.card p{margin:.4rem 0}
+.strip{background:#3a2d1a;color:#f5edd8;padding:1rem 1.2rem;overflow-x:auto;font-family:ui-monospace,Menlo,monospace;border-radius:4px;border-top:6px solid var(--brass)}
+.plate{background:linear-gradient(120deg,#c9a24a,#b28c33);color:#fffbeF;border-radius:6px;padding:.9rem 1.2rem;font-family:ui-monospace,Menlo,monospace;font-size:1.05rem;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.btn{display:inline-block;background:var(--glassdk);color:#f4fbff;font-family:'Heebo',sans-serif;font-weight:700;text-decoration:none;padding:.55rem 1.1rem;border-radius:999px;margin:.3rem .4rem .3rem 0}
+.btn:hover{background:#3c565e;color:#f4fbff}.btn:active{transform:translateY(2px)}
+.btn:focus-visible{outline:2px dashed var(--brass);outline-offset:3px}
+a{color:var(--brassdk);font-weight:700}
+table{border-collapse:collapse}td{padding:.2rem .9rem .2rem 0;vertical-align:top}
+td:first-child{font-weight:700;color:var(--brassdk);white-space:nowrap}
+ul{margin:.4rem 0;padding-left:1.2rem}li{margin:.25rem 0}
+.small{font-size:.92rem}
+footer{padding:0 6vw 2.5rem;max-width:1020px;margin:0 auto;color:#8a7a5c}
 </style>
 </head>
 <body>
 <header class="hero">
-<img class="logo" src="assets/logo.png" alt="Three hemp strands twisting into one diagonal rope cord">
-<img class="banner" src="assets/banner.png" alt="Inside the ropewalk: strands running the shed length, a chalk tally board, a finished coil by a measuring rod">
-<h1>Tkinter-Calculator</h1>
-<p>Bench book, first bay. A small tkinter window, titled Area and Perimeter Calculator, 275 by 95 pixels, fixed in size, semi transparent where the window system allows it, black ground with white lettering and a Helvetica title. Stated clearly: despite the repository name this is not a general arithmetic calculator. It handles one rectangle only.</p>
-<p><a class="tallytag" href="https://github.com/Epsilon0xCell/Tkinter-Calculator">Open the repo</a> <a class="tallytag" href="#refusals">Refusals</a></p>
+<div class="inner">
+<img class="wide" src="assets/intro-banner.png" alt="Two hands holding up the finished oak frame with its glass fitted, the workshop benches and timber stacks visible through the glass behind it">
+<div class="row"><img src="assets/logo.png" alt="Tkinter-Calculator logo: a plain oak picture frame seen from directly above on a pine workbench, a brass rule laid along its base and a pale glass sheet leaning beside it, a small oak leaf mark branded into the frame's bottom rail"><div><h1>Tkinter-Calculator</h1><p>A small Tkinter GUI calculator for a rectangle, and only for a rectangle: two entry boxes take a base and a height, pressing Calculate shows the area and the perimeter. Multiply the two measurements for the glass to cut; add them round for the moulding to run around it. Standard library only.</p><p><a class="btn" href="https://github.com/Epsilon0xCell/Tkinter-Calculator">Open the repo</a> <a class="btn" href="#proof">The tests</a></p></div></div>
+</div>
 </header>
 <main>
-<div class="rod"></div>
-<section class="bay"><span class="bayno">Bay 2</span><h2>One job, walked through</h2><p>Two empty entry boxes wait side by side, one for base and one for height. Decimals and padded spaces are accepted. Pressing the Calculate button writes one line underneath:</p><pre>Area: 15, Perimeter: 16</pre><p>That line is for a base of 5 and a height of 3, with trailing zeros trimmed. Float noise is tidied, so 0.1 by 0.2 reads <code>Area: 0.02</code>. Very large entries print in full: 1234567 by 7654321 gives <code>Area: 9449772114007</code>.</p></section>
-<section class="bay" id="refusals"><span class="bayno">Bay 3</span><h2>Refusals, exactly as phrased</h2><p>An empty box, a word, or the text <code>inf</code> or <code>nan</code> returns: Please enter two numbers.</p><p>A side below zero returns: Base and height cannot be negative. Zero itself is allowed.</p><p>A note adds that results smaller than 1e-10 round to 0 at the print precision used.</p></section>
-<div class="rod"></div>
-<section class="bay"><span class="bayno">Bay 4</span><h2>Running and checking</h2><pre>python3 main.py
-python3 -m unittest</pre><p>Running needs Python 3 with tkinter and a real or virtual display. There is nothing to install beyond Python. Importing <code>main.py</code> opens no window, because the deciding function <code>calculate_result</code> sits apart from the widgets. The test command runs 12 tests over that function and its number formatting.</p><div class="benchnote"><p>Bench note: the window itself went untested on a machine with no screen. The headless logic tests are what was verified.</p></div></section>
+<section class="card"><h2>Run it</h2><div class="strip">python3 main.py</div><p>Requires Python 3 with tkinter and a display; there is nothing to install beyond Python itself. On a headless machine the window needs a virtual display (for example Xvfb) to open.</p></section>
+<section class="card"><h2>What it computes</h2><div class="plate">Area: 15, Perimeter: 16&nbsp;&nbsp;(base 5, height 3)</div><ul>
+<li>Two entry boxes take the base and the height. Both start empty.</li>
+<li>Decimals are accepted, not just whole numbers, and surrounding whitespace is ignored.</li>
+<li>Results print with trailing zeros trimmed, and a large product prints all its digits: 1234567 by 7654321 gives <code>Area: 9449772114007</code>.</li>
+<li>If either box is empty or not a number, the result line shows <code>Please enter two numbers</code> and the window stays usable. The same message covers <code>inf</code> and <code>nan</code>, which <code>float()</code> accepts as text.</li>
+<li>A negative base or height shows <code>Base and height cannot be negative</code>. Zero is allowed and computes as entered.</li>
+</ul></section>
+<section class="card"><h2>How it is built</h2><p>The deciding code is separate from the window. <code>calculate_result()</code> in <code>main.py</code> takes the two entry strings and returns the exact text for the result label; the button handler only reads the boxes and shows that text. Importing <code>main.py</code> builds nothing, so the logic can be tested on a machine with no display.</p></section>
+<section class="card" id="proof"><h2>The tests</h2><div class="strip">python3 -m unittest</div><p>12 tests over <code>calculate_result()</code> and the number formatting: whole numbers, decimals, padded input, exponent input, zero, empty and text input, <code>inf</code> and <code>nan</code>, negative sides, the large product above, and float noise (0.1 by 0.2 reads <code>Area: 0.02</code>).</p></section>
+<section class="card"><h2>Honest limits</h2><p>The window itself was not run in the recorded pass: the maintenance host has no display, so <code>python3 main.py</code> stops with a tkinter <code>TclError</code> there, and the GUI is recorded as not run rather than passed. The logic tests are what that pass verified. Results under 1e-10 in size round to 0 at the print precision used.</p></section>
+<section class="card"><h2>The files</h2><p class="small"><code>main.py</code>, the whole program, logic and window. <code>test_main.py</code>, the headless logic tests. <code>LICENSE</code>, the GNU General Public License v3. The full notes are in the <a href="https://github.com/Epsilon0xCell/Tkinter-Calculator">repo README</a>.</p></section>
 </main>
-<footer><p>Licence: GNU General Public License v3. A finished coil beside the measuring rod, its length tallied and tied off.</p></footer>
+<footer><p>Two measurements are the whole job: multiply them for the area inside, add them round for the length that frames it.</p></footer>
 </body>
 </html>
