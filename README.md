@@ -1,9 +1,11 @@
-![Intro scenery](intro-banner.png)
+![Intro scenery: two hands holding up the finished oak frame with its glass fitted, the workshop benches and timber stacks visible through the glass behind it](intro-banner.png)
 
 
 # Tkinter-Calculator
 
-![Wordmark banner](banner.png)
+![Wordmark banner: a framer's bench with one oak rectangle frame laid flat, a tape measure stretched across its width and a steel rule down its height, offcuts of moulding around it and a cut sheet of pale glass waiting beside it](banner.png)
+
+<p align="center"><img src="logo.png" alt="Tkinter-Calculator logo: a plain oak picture frame seen from directly above on a pine workbench, a brass rule laid along its base and a pale glass sheet leaning beside it, a small oak leaf mark branded into the frame's bottom rail" width="200"></p>
 
 ![Animated scene](scene.svg)
 
